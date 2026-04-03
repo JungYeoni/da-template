@@ -47,11 +47,13 @@ def classification_metrics(y_true, y_pred, y_prob=None) -> dict:
 def residual_summary(y_true, y_pred) -> pd.DataFrame:
     """잔차 기술통계 — 회귀 진단용."""
     residuals = np.array(y_true) - np.array(y_pred)
-    return pd.DataFrame({
-        "mean": [residuals.mean()],
-        "std": [residuals.std()],
-        "min": [residuals.min()],
-        "max": [residuals.max()],
-        "skewness": [pd.Series(residuals).skew()],
-        "kurtosis": [pd.Series(residuals).kurtosis()],
-    }).round(4)
+    return pd.DataFrame(
+        {
+            "mean": [residuals.mean()],
+            "std": [residuals.std()],
+            "min": [residuals.min()],
+            "max": [residuals.max()],
+            "skewness": [pd.Series(residuals).skew()],
+            "kurtosis": [pd.Series(residuals).kurtosis()],
+        }
+    ).round(4)

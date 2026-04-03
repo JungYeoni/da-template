@@ -15,15 +15,17 @@ import pandas as pd
 import seaborn as sns
 
 # 전역 스타일 설정
-plt.rcParams.update({
-    "font.family": "AppleGothic",   # macOS 한국어; Linux는 'NanumGothic' 등으로 변경
-    "axes.unicode_minus": False,
-    "figure.dpi": 120,
-    "savefig.dpi": 300,
-    "font.size": 11,
-    "axes.titlesize": 13,
-    "axes.labelsize": 11,
-})
+plt.rcParams.update(
+    {
+        "font.family": "AppleGothic",  # macOS 한국어; Linux는 'NanumGothic' 등으로 변경
+        "axes.unicode_minus": False,
+        "figure.dpi": 120,
+        "savefig.dpi": 300,
+        "font.size": 11,
+        "axes.titlesize": 13,
+        "axes.labelsize": 11,
+    }
+)
 PALETTE = sns.color_palette("colorblind")
 sns.set_style("whitegrid")
 
@@ -64,9 +66,15 @@ def plot_correlation_heatmap(df: pd.DataFrame, title: str = "상관관계 히트
     mask = np.triu(np.ones_like(corr, dtype=bool))
     fig, ax = plt.subplots(figsize=(max(8, len(corr) * 0.8), max(6, len(corr) * 0.7)))
     sns.heatmap(
-        corr, mask=mask, annot=True, fmt=".2f",
-        cmap="coolwarm", center=0, square=True,
-        linewidths=0.5, ax=ax,
+        corr,
+        mask=mask,
+        annot=True,
+        fmt=".2f",
+        cmap="coolwarm",
+        center=0,
+        square=True,
+        linewidths=0.5,
+        ax=ax,
     )
     ax.set_title(title)
     plt.tight_layout()

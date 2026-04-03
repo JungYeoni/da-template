@@ -9,6 +9,7 @@ from src.features.build_features import build_time_features, compute_psi
 
 # ── 픽스처 ─────────────────────────────────────────────────────────────────────
 
+
 @pytest.fixture
 def sample_ts() -> pd.DataFrame:
     """일별 시계열 샘플 데이터."""
@@ -22,14 +23,17 @@ def sample_tabular() -> pd.DataFrame:
     """정형 테이블 샘플 데이터."""
     np.random.seed(42)
     n = 200
-    return pd.DataFrame({
-        "feature_a": np.random.randn(n),
-        "feature_b": np.random.randn(n) * 2 + 1,
-        "feature_c": np.random.randn(n),
-    })
+    return pd.DataFrame(
+        {
+            "feature_a": np.random.randn(n),
+            "feature_b": np.random.randn(n) * 2 + 1,
+            "feature_c": np.random.randn(n),
+        }
+    )
 
 
 # ── 시계열 피처 테스트 ─────────────────────────────────────────────────────────
+
 
 class TestBuildTimeFeatures:
     def test_lag_columns_created(self, sample_ts):
@@ -61,6 +65,7 @@ class TestBuildTimeFeatures:
 
 
 # ── PSI 테스트 ─────────────────────────────────────────────────────────────────
+
 
 class TestComputePsi:
     def test_identical_distributions(self, sample_tabular):

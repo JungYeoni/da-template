@@ -17,6 +17,7 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 # ── 시계열 피처 ────────────────────────────────────────────────────────────────
 
+
 def build_time_features(
     df: pd.DataFrame,
     target_col: str,
@@ -53,6 +54,7 @@ def build_time_features(
 
 # ── 정형 테이블 피처 ──────────────────────────────────────────────────────────
 
+
 def build_preprocessor(
     num_cols: list[str],
     cat_cols: list[str],
@@ -61,21 +63,28 @@ def build_preprocessor(
 
     반드시 sklearn Pipeline 내에서 사용해 train/val 분리 후 fit.
     """
-    num_pipe = Pipeline([
-        ("imputer", SimpleImputer(strategy="median")),
-        ("scaler", StandardScaler()),
-    ])
-    cat_pipe = Pipeline([
-        ("imputer", SimpleImputer(strategy="most_frequent")),
-        ("encoder", OneHotEncoder(handle_unknown="ignore", sparse_output=False)),
-    ])
-    return ColumnTransformer([
-        ("num", num_pipe, num_cols),
-        ("cat", cat_pipe, cat_cols),
-    ])
+    num_pipe = Pipeline(
+        [
+            ("imputer", SimpleImputer(strategy="median")),
+            ("scaler", StandardScaler()),
+        ]
+    )
+    cat_pipe = Pipeline(
+        [
+            ("imputer", SimpleImputer(strategy="most_frequent")),
+            ("encoder", OneHotEncoder(handle_unknown="ignore", sparse_output=False)),
+        ]
+    )
+    return ColumnTransformer(
+        [
+            ("num", num_pipe, num_cols),
+            ("cat", cat_pipe, cat_cols),
+        ]
+    )
 
 
 # ── 피처 검증 ─────────────────────────────────────────────────────────────────
+
 
 def compute_psi(expected: pd.Series, actual: pd.Series, bins: int = 10) -> float:
     """Population Stability Index 계산 — 분포 드리프트 탐지.
@@ -120,7 +129,7 @@ def validate_features(
     # 중복성 확인
     corr_matrix = df_train[feature_cols].corr().abs()
     for i, col_a in enumerate(feature_cols):
-        for col_b in feature_cols[i + 1:]:
+        for col_b in feature_cols[i + 1 :]:
             if corr_matrix.loc[col_a, col_b] > corr_threshold:
                 report.setdefault(col_a, {})["high_corr"] = col_b
 
