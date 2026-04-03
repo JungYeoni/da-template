@@ -1,7 +1,9 @@
 # da-template
 
+[![Use this template](https://img.shields.io/badge/Use%20this%20template-2ea44f?style=for-the-badge&logo=github)](https://github.com/JungYeoni/da-template/generate)
+
 개인 또는 소규모 팀을 위한 데이터분석·ML 프로젝트 템플릿입니다.  
-새 프로젝트를 시작할 때 이 저장소를 클론하거나 복사하면, 일관된 디렉터리 구조·재현성 기준·협업 규칙·GitHub 자동화를 바로 사용할 수 있습니다.
+새 프로젝트를 시작할 때 위 버튼을 눌러 레포를 생성하면, 일관된 디렉터리 구조·재현성 기준·협업 규칙·GitHub 자동화를 바로 사용할 수 있습니다.
 
 ---
 
