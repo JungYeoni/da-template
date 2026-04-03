@@ -1,85 +1,176 @@
 # da-template
 
-Claude Code를 데이터 분석 전문가로 설정하는 프로젝트 템플릿입니다.  
-이 레포를 클론하거나 `.claude/` 폴더를 복사하면 Claude가 EDA, 시계열, GIS, ML 등 분석 워크플로우를 표준화된 방식으로 지원합니다.
+개인 또는 소규모 팀을 위한 데이터분석·ML 프로젝트 템플릿입니다.  
+새 프로젝트를 시작할 때 이 저장소를 클론하거나 복사하면, 일관된 디렉터리 구조·재현성 기준·협업 규칙·GitHub 자동화를 바로 사용할 수 있습니다.
 
-## 구성
+---
+
+## 적합한 프로젝트 유형
+
+- 정형 데이터 EDA 및 분류/회귀
+- 시계열 분석 및 예측
+- 회귀/인과추론 (OLS, DiD, 패널 데이터)
+- GIS 결합형 데이터 분석
+- 논문·보고서용 시각화 + 인터랙티브 대시보드
+
+---
+
+## 디렉터리 구조
 
 ```
-.claude/
-├── CLAUDE.md              # 역할 및 기술 스택 기본 설정
-├── rules/                 # 분석 규칙 (로드 순서 준수)
-│   ├── 01_data_safety.md  # 개인정보 처리, 원본 보존
-│   ├── 02_code_style.md   # PEP 8, pandas 작성 규칙
-│   ├── 03_analysis_workflow.md  # EDA → 전처리 → 모델링 순서
-│   ├── 04_output_format.md      # 결과 요약 형식, 숫자 표기
-│   └── 05_communication.md      # 응답 언어, 불확실성 표현
-└── commands/              # 슬래시 커맨드 (분석 스킬)
-    ├── timeseries.md      # /timeseries
-    ├── tabular.md         # /tabular
-    ├── gis.md             # /gis
-    ├── regression.md      # /regression
-    ├── ml.md              # /ml
-    └── visualization.md   # /visualization
+da-template/
+├── CLAUDE.md                     # 프로젝트 분석 원칙 (Claude Code 지침)
+├── pyproject.toml                # Python 의존성 및 도구 설정
+├── requirements.txt              # 핵심 의존성 목록
+├── .gitignore
+│
+├── .claude/
+│   ├── CLAUDE.md                 # 전역 역할·스택 설정
+│   ├── settings.json             # 민감 파일 접근 제한
+│   ├── agents/                   # 서브에이전트 역할 정의
+│   │   ├── data-scientist.md
+│   │   ├── data-visualization.md
+│   │   └── feature-engineer.md
+│   ├── commands/                 # 슬래시 커맨드 (/timeseries 등)
+│   └── rules/                    # 분석 규칙 (코드 스타일, 워크플로우 등)
+│
+├── .github/
+│   ├── CODEOWNERS
+│   ├── pull_request_template.md
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── experiment.yml        # 실험 계획 이슈 템플릿
+│   │   ├── bug_report.yml
+│   │   └── config.yml
+│   └── workflows/
+│       ├── ci.yml                # lint + test
+│       ├── notebook-smoke-test.yml
+│       └── pr-title-lint.yml
+│
+├── configs/
+│   ├── base.yaml                 # 공통 설정 (seed, split 비율, 경로 등)
+│   ├── dev.yaml                  # 개발 환경 오버라이드
+│   └── prod.yaml                 # 최종 제출 환경 오버라이드
+│
+├── data/
+│   ├── raw/          # 원본 데이터 (git 추적 제외)
+│   ├── interim/      # 중간 처리 결과
+│   └── processed/    # 모델 입력용 최종 데이터
+│
+├── notebooks/        # 탐색·실험용 Jupyter 노트북
+├── reports/          # 최종 보고서·시각화 산출물
+│
+├── src/
+│   ├── features/
+│   │   └── build_features.py    # 시계열·테이블·GIS 피처 함수
+│   ├── modeling/
+│   │   └── train.py             # 모델 학습 유틸리티
+│   ├── evaluation/
+│   │   └── evaluate.py          # 평가 지표 계산
+│   └── visualization/
+│       └── plots.py             # 정적 시각화 함수
+│
+└── tests/
+    └── test_features.py         # 피처 단위 테스트
 ```
 
-## 슬래시 커맨드
+---
 
-| 커맨드 | 설명 |
+## 시작 방법
+
+```bash
+# 1. 저장소 클론
+git clone https://github.com/JungYeoni/da-template.git my-project
+cd my-project
+
+# 2. 가상환경 생성 및 의존성 설치
+python -m venv .venv
+source .venv/bin/activate          # Windows: .venv\Scripts\activate
+pip install -e ".[dev]"
+
+# 3. 테스트 실행 (환경 확인)
+pytest tests/ -v
+```
+
+---
+
+## 새 실험을 시작하는 기본 흐름
+
+1. **GitHub Issue 생성** — `[Experiment]` 템플릿으로 목표·데이터·분할 전략 문서화
+2. **브랜치 생성** — `git checkout -b experiment/short-description`
+3. **`configs/base.yaml` 확인** — random seed, split 비율, 경로 설정
+4. **노트북 작성** — `notebooks/` 아래에서 EDA 및 실험
+5. **재사용 함수 정리** — `src/` 하위 모듈로 이동 후 테스트 작성
+6. **PR 생성** — `[Experiment]` 접두사, PR 체크리스트 작성
+
+### PR 제목 규칙
+
+| 접두사 | 사용 시점 |
+|--------|----------|
+| `[Experiment]` | 새 분석 실험 |
+| `[Feature]` | 피처 추가·수정 |
+| `[Fix]` | 버그 수정 |
+| `[Docs]` | 문서 변경 |
+| `[Refactor]` | 기능 변경 없는 코드 정리 |
+| `[Chore]` | 의존성, 설정 변경 |
+
+---
+
+## 핵심 원칙
+
+### 재현성
+- `np.random.seed(42)` 고정
+- 데이터 분할 기준을 코드 주석으로 명시
+- 전처리는 `sklearn.Pipeline` 내에서만 수행
+
+### 데이터 누수 방지
+- 피처 생성 전에 train/val/test 분리 확정
+- 시계열 rolling/lag은 `shift(1)` 후 계산
+- 인코더·스케일러 파라미터는 학습 데이터에서만 fit
+
+### 방법론적 타당성 우선
+- 성능보다 통계적 가정 검증, 계수 해석, 한계점 명시를 우선
+- 복잡한 모델보다 해석 가능하고 재현 가능한 방법 선택
+
+---
+
+## Claude Code 연동
+
+`CLAUDE.md` (프로젝트 루트)와 `.claude/` 폴더가 Claude Code에서 자동으로 로드됩니다.
+
+### 슬래시 커맨드
+
+| 커맨드 | 기능 |
 |--------|------|
-| `/timeseries` | 시계열 분석 — ADF 정상성 검정, 계절성 분해, ARIMA, Prophet |
-| `/tabular` | 테이블 EDA — 기술통계, 결측치 히트맵, 이상치 탐지, 상관관계 |
-| `/gis` | 지리공간 분석 — geopandas, folium 지도, 공간 조인, DBSCAN 클러스터링 |
-| `/regression` | 회귀 분석 — OLS, VIF, 잔차 진단, Ridge/Lasso 비교 |
-| `/ml` | 머신러닝 파이프라인 — 전처리, 모델 비교, 하이퍼파라미터 튜닝, SHAP |
-| `/visualization` | 시각화 — matplotlib/seaborn/plotly, 색약 친화 팔레트, 한국어 폰트 |
+| `/timeseries` | 시계열 분석 — ADF, ARIMA, Prophet |
+| `/tabular` | 테이블 EDA — 기술통계, 이상치, 상관관계 |
+| `/gis` | 지리공간 분석 — geopandas, folium |
+| `/regression` | 회귀 분석 — OLS, VIF, 잔차 진단 |
+| `/ml` | ML 파이프라인 — 전처리, 모델 비교, SHAP |
+| `/visualization` | 시각화 — matplotlib, seaborn, plotly |
 
-## 적용 방법
+### 서브에이전트
 
-### 이 프로젝트에만 적용
+`.claude/agents/` 파일을 Claude Code가 에이전트로 로드합니다.
 
-```bash
-git clone https://github.com/LeeJungYeon/da-template.git
-cd your-project
-cp -r da-template/.claude .
-```
+| 에이전트 | 역할 |
+|----------|------|
+| `data-scientist` | 통계 분석, 시계열, 회귀/인과추론, sklearn ML |
+| `feature-engineer` | 피처 설계·검증 (시계열, 테이블, GIS) |
+| `data-visualization` | 정적 이미지(dpi=300) + Plotly/Streamlit 대시보드 |
 
-### 모든 프로젝트에 전역 적용
+> Claude Code 외 다른 코딩 에이전트(Cursor, Copilot 등)를 사용하는 경우에도 `CLAUDE.md`와 `src/` 코드가 분석 원칙 참고 문서로 활용될 수 있습니다.
 
-```bash
-cp -r da-template/.claude/rules ~/.claude/rules
-cp -r da-template/.claude/commands ~/.claude/commands
-cp da-template/.claude/CLAUDE.md ~/.claude/CLAUDE.md
-```
+---
 
-> 전역 적용 시 기존 `~/.claude/CLAUDE.md`가 있다면 내용을 병합하세요.
+## GitHub Actions
 
-## 주요 규칙 요약
+| 워크플로우 | 트리거 | 내용 |
+|-----------|--------|------|
+| `ci.yml` | push/PR → main | ruff lint, black format check, pytest |
+| `notebook-smoke-test.yml` | PR에서 notebooks/ 변경 | 변경된 노트북 실행 가능 여부 확인 |
+| `pr-title-lint.yml` | PR 생성/수정 | 제목 접두사 형식 확인 |
 
-**데이터 안전성**
-- PII 컬럼은 분석 전 마스킹/제거 먼저 제안
-- 원본 데이터프레임 직접 수정 금지 → `df_clean = df.copy()` 패턴
-- 대용량 파일(>1GB)은 청크 처리 방식 기본 제안
-
-**분석 워크플로우**
-- 데이터 로드 → EDA → 전처리 → 분석/모델링 → 결과 해석 순서 준수
-- EDA 없이 바로 모델링 요청 시 EDA 먼저 제안
-- `random_state=42` 포함으로 재현성 확보
-
-**코드 스타일**
-- PEP 8, 라인 길이 최대 100자
-- pandas 메서드 체이닝은 괄호로 감싸서 줄바꿈
-- `iterrows()` 지양, 벡터 연산 우선
-
-## 기술 스택
-
-- **언어**: Python 3.10+
-- **데이터**: pandas, polars
-- **시각화**: matplotlib, seaborn, plotly
-- **통계**: scipy, statsmodels
-- **ML**: scikit-learn, xgboost, lightgbm
-- **GIS**: geopandas, folium, shapely
-- **환경**: Jupyter Notebook / VS Code
+---
 
 ## 라이선스
 
