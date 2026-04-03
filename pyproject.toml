@@ -1,6 +1,6 @@
 [build-system]
 requires = ["setuptools>=68", "wheel"]
-build-backend = "setuptools.backends.legacy:build"
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "da-template"
@@ -24,16 +24,18 @@ dependencies = [
     "seaborn>=0.13",
     "plotly>=5.18",
     "streamlit>=1.30",
-    # GIS
-    "geopandas>=0.14",
-    "folium>=0.15",
-    "shapely>=2.0",
     # 설정
     "pyyaml>=6.0",
     "python-dotenv>=1.0",
 ]
 
 [project.optional-dependencies]
+# GIS 패키지는 시스템 라이브러리(GDAL 등) 필요 — 별도 설치
+gis = [
+    "geopandas>=0.14",
+    "folium>=0.15",
+    "shapely>=2.0",
+]
 dev = [
     "pytest>=7.4",
     "pytest-cov>=4.1",
@@ -42,6 +44,10 @@ dev = [
     "ipykernel>=6.28",
     "nbconvert>=7.14",
 ]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
 
 [tool.ruff]
 line-length = 100
