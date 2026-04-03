@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from src.features.build_features import build_time_features, compute_psi, validate_features
+from src.features.build_features import build_time_features, compute_psi
 
 
 # ── 픽스처 ─────────────────────────────────────────────────────────────────────

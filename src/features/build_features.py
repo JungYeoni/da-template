@@ -7,8 +7,6 @@
 - 인코더는 Pipeline 내에서만 사용 (분리 전 적용 금지)
 """
 
-from pathlib import Path
-
 import numpy as np
 import pandas as pd
 from sklearn.compose import ColumnTransformer

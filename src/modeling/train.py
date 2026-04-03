@@ -10,7 +10,6 @@
 from pathlib import Path
 
 import joblib
-import numpy as np
 from sklearn.model_selection import StratifiedKFold, cross_val_score
 from sklearn.pipeline import Pipeline
 
