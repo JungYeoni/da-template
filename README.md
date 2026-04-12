@@ -171,6 +171,7 @@ pytest tests/ -v
 | `ci.yml` | push/PR → main | ruff lint, black format check, pytest |
 | `notebook-smoke-test.yml` | PR에서 notebooks/ 변경 | 변경된 노트북 실행 가능 여부 확인 |
 | `pr-title-lint.yml` | PR 생성/수정 | 제목 접두사 형식 확인 |
+| `changelog.yml` | push → main | `CHANGELOG.md` 자동 생성 (git-cliff) |
 
 ---
 
