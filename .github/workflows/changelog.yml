@@ -23,8 +23,6 @@ jobs:
 
       - name: git-cliff로 CHANGELOG 생성
         run: git-cliff --config cliff.toml --verbose --output CHANGELOG.md
-        env:
-          GITHUB_REPO: ${{ github.repository }}
 
       - name: CHANGELOG 커밋 & 푸시
         uses: stefanzweifel/git-auto-commit-action@v5
