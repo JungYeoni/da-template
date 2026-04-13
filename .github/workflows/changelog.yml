@@ -16,13 +16,14 @@ jobs:
         with:
           fetch-depth: 0  # 전체 git 히스토리 필요
 
-      - name: git-cliff로 CHANGELOG 생성
-        uses: orhun/git-cliff-action@v3
+      - name: git-cliff 설치
+        uses: taiki-e/install-action@v2
         with:
-          config: cliff.toml
-          args: --verbose
+          tool: git-cliff
+
+      - name: git-cliff로 CHANGELOG 생성
+        run: git-cliff --config cliff.toml --verbose --output CHANGELOG.md
         env:
-          OUTPUT: CHANGELOG.md
           GITHUB_REPO: ${{ github.repository }}
 
       - name: CHANGELOG 커밋 & 푸시
