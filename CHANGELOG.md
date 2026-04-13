@@ -13,6 +13,7 @@
 
 ### 기타
 
+- 이슈 템플릿을 da-template 컨셉에 맞게 교체 ([a591a5d](https://github.com/JungYeoni/da-template/commit/a591a5db79004ada76ac067465dab411c6df278f))
 - Uv 패키지 매니저로 전환 ([330ab72](https://github.com/JungYeoni/da-template/commit/330ab7285fb25faf8b77f8c161f5de62c67dadce))
 - CHANGELOG 자동 업데이트 워크플로우 추가 (git-cliff) ([cb4777d](https://github.com/JungYeoni/da-template/commit/cb4777d787dc6481b03042084a695d5ac2eb976e))
 - Docs/ gitignore 추가 ([e960045](https://github.com/JungYeoni/da-template/commit/e9600451af2c5e32d411b808fe3e72fad8fd3fee))
@@ -21,6 +22,7 @@
 
 ### 문서
 
+- CHANGELOG 자동 업데이트 [skip ci] ([9fcbee6](https://github.com/JungYeoni/da-template/commit/9fcbee6d6e029bfcf9e728c00d30acf89f357444))
 - CHANGELOG 자동 업데이트 [skip ci] ([581b0d5](https://github.com/JungYeoni/da-template/commit/581b0d54163c8cb624eb8b783781342d32991591))
 - CHANGELOG 자동 업데이트 [skip ci] ([8fd6c82](https://github.com/JungYeoni/da-template/commit/8fd6c829c4a81740172cb2ed90454b21379e2b58))
 - [Docs] README에 Use this template 배지 추가 ([bd8c252](https://github.com/JungYeoni/da-template/commit/bd8c252de53f0507604338650ab59b48ad5533a8))
