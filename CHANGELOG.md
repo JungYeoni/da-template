@@ -23,6 +23,8 @@
 
 ### 문서
 
+- Uv 의존성 관리 안내 추가 ([4b14197](https://github.com/JungYeoni/da-template/commit/4b14197f8b497d2dce67494eda6e52d23b5bfa34))
+- CHANGELOG 자동 업데이트 [skip ci] ([e9b618c](https://github.com/JungYeoni/da-template/commit/e9b618c93d85a533bfffb088790f61a50117d519))
 - Git 작업 안전 규칙 추가 ([f368b28](https://github.com/JungYeoni/da-template/commit/f368b283043023d54b3fea4cfbe082fa91f4fda7))
 - CHANGELOG 자동 업데이트 [skip ci] ([143c37b](https://github.com/JungYeoni/da-template/commit/143c37b9f04365f28ba09c94f45f7fa09b742bcf))
 - README 사용 가이드 개선 ([22f91af](https://github.com/JungYeoni/da-template/commit/22f91afdb4d87eceef6b6901dfaced7f1425efd4))
