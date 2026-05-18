@@ -23,6 +23,8 @@
 
 ### 문서
 
+- README 사용 가이드 개선 ([22f91af](https://github.com/JungYeoni/da-template/commit/22f91afdb4d87eceef6b6901dfaced7f1425efd4))
+- CHANGELOG 자동 업데이트 [skip ci] ([0ec65ea](https://github.com/JungYeoni/da-template/commit/0ec65ea30073b2b3e982aa1011895019e6bd6b78))
 - CHANGELOG 자동 업데이트 [skip ci] ([fe0d00f](https://github.com/JungYeoni/da-template/commit/fe0d00f3a3db020f99f6040a6b37caee5a211284))
 - CHANGELOG 자동 업데이트 [skip ci] ([53cbe0d](https://github.com/JungYeoni/da-template/commit/53cbe0d354bb6216e66753021854add6a66a3f70))
 - CHANGELOG 자동 업데이트 [skip ci] ([9fcbee6](https://github.com/JungYeoni/da-template/commit/9fcbee6d6e029bfcf9e728c00d30acf89f357444))
