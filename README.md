@@ -201,6 +201,7 @@ pytest tests/ -v
 
 ### 문서
 
+- CHANGELOG 자동 업데이트 [skip ci] ([fe0d00f](https://github.com/JungYeoni/da-template/commit/fe0d00f3a3db020f99f6040a6b37caee5a211284))
 - CHANGELOG 자동 업데이트 [skip ci] ([53cbe0d](https://github.com/JungYeoni/da-template/commit/53cbe0d354bb6216e66753021854add6a66a3f70))
 - CHANGELOG 자동 업데이트 [skip ci] ([9fcbee6](https://github.com/JungYeoni/da-template/commit/9fcbee6d6e029bfcf9e728c00d30acf89f357444))
 - CHANGELOG 자동 업데이트 [skip ci] ([581b0d5](https://github.com/JungYeoni/da-template/commit/581b0d54163c8cb624eb8b783781342d32991591))
@@ -209,6 +210,7 @@ pytest tests/ -v
 
 ### 버그 수정
 
+- Pr 제목 접두사 검사 워크플로우 삭제 ([e52463d](https://github.com/JungYeoni/da-template/commit/e52463dd9bc6f3552470cb9a6df9cc0ced29d52c))
 - Cliff.toml env.GITHUB_REPO 변수 오류 수정 ([a68e29c](https://github.com/JungYeoni/da-template/commit/a68e29c9a790684ee0524e106a8106ca99d63a8c))
 - Git-cliff-action Docker Buster EOL 오류 수정 ([5bb2c8b](https://github.com/JungYeoni/da-template/commit/5bb2c8bb2a06560c1cd59ce137e5b10f37b63dc9))
 - Ruff I001 import 정렬 수정 ([df86e5e](https://github.com/JungYeoni/da-template/commit/df86e5ed990c20127f7ce64858e4fdc151d7ed63))
