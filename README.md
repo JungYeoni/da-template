@@ -4,7 +4,7 @@
 
 데이터 분석과 머신러닝 프로젝트를 빠르게 시작하기 위한 Python 프로젝트 템플릿입니다.
 
-반복적으로 필요한 디렉터리 구조, 설정 파일, 테스트, GitHub Actions, 이슈/PR 템플릿, Claude Code용 분석 지침을 미리 갖추고 있습니다. 새 프로젝트를 만들 때 위 **Use this template** 버튼을 누르면 같은 구조로 저장소를 시작할 수 있습니다.
+반복적으로 필요한 디렉터리 구조, 설정 파일, 테스트, GitHub Actions, 이슈/PR 템플릿, Claude Code용 분석 지침을 미리 갖추고 있습니다. 의존성 관리는 기본적으로 `uv`와 `pyproject.toml`/`uv.lock`을 사용합니다. 새 프로젝트를 만들 때 위 **Use this template** 버튼을 누르면 같은 구조로 저장소를 시작할 수 있습니다.
 
 ---
 
@@ -36,16 +36,16 @@ cd my-project
 
 ### 2. 개발 환경 준비
 
-이 프로젝트는 Python 3.11 이상을 기준으로 합니다.
+이 프로젝트는 Python 3.11 이상과 `uv` 기반 의존성 관리를 기본으로 합니다.
 
-`uv`를 사용하는 경우:
+권장 방식:
 
 ```bash
 uv sync --extra dev
 uv run pytest tests/ -v
 ```
 
-`pip`를 사용하는 경우:
+`pip`만 사용할 수 있는 환경에서는 아래 방식도 가능합니다.
 
 ```bash
 python -m venv .venv
@@ -72,6 +72,34 @@ Windows PowerShell에서는 가상환경 활성화 명령이 다릅니다.
 
 ---
 
+## 의존성 관리
+
+이 템플릿은 `uv`를 기본 패키지 매니저로 사용합니다.
+
+- 런타임/개발 의존성은 `pyproject.toml`에 정의합니다.
+- 잠금 파일은 `uv.lock`으로 관리합니다.
+- 새 환경을 만들 때는 `uv sync --extra dev`를 사용합니다.
+- 명령 실행은 `uv run <command>` 형식을 권장합니다.
+- `requirements.txt`는 호환성이나 외부 배포가 필요한 경우를 위한 보조 파일입니다.
+
+자주 쓰는 명령:
+
+```bash
+uv sync --extra dev
+uv run pytest tests/ -v
+uv run ruff check src/ tests/
+uv run ruff format src/ tests/
+```
+
+의존성을 추가할 때:
+
+```bash
+uv add pandas
+uv add --dev pytest
+```
+
+---
+
 ## 디렉터리 구조
 
 ```text
@@ -80,6 +108,7 @@ da-template/
 ├── CHANGELOG.md                  # 변경 이력
 ├── CLAUDE.md                     # Claude Code용 프로젝트 지침
 ├── pyproject.toml                # 패키지 메타데이터와 도구 설정
+├── uv.lock                       # uv 잠금 파일
 ├── requirements.txt              # 핵심 의존성 목록
 ├── cliff.toml                    # git-cliff 변경 이력 설정
 │
