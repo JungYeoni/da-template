@@ -23,6 +23,8 @@
 
 ### 문서
 
+- Git 작업 안전 규칙 추가 ([f368b28](https://github.com/JungYeoni/da-template/commit/f368b283043023d54b3fea4cfbe082fa91f4fda7))
+- CHANGELOG 자동 업데이트 [skip ci] ([143c37b](https://github.com/JungYeoni/da-template/commit/143c37b9f04365f28ba09c94f45f7fa09b742bcf))
 - README 사용 가이드 개선 ([22f91af](https://github.com/JungYeoni/da-template/commit/22f91afdb4d87eceef6b6901dfaced7f1425efd4))
 - CHANGELOG 자동 업데이트 [skip ci] ([0ec65ea](https://github.com/JungYeoni/da-template/commit/0ec65ea30073b2b3e982aa1011895019e6bd6b78))
 - CHANGELOG 자동 업데이트 [skip ci] ([fe0d00f](https://github.com/JungYeoni/da-template/commit/fe0d00f3a3db020f99f6040a6b37caee5a211284))
