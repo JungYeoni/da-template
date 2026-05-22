@@ -4,6 +4,7 @@
 
 ### CI/CD
 
+- 노트북 스모크 테스트 워크플로우 삭제 ([646a7f6](https://github.com/JungYeoni/da-template/commit/646a7f6989f6d33a4c6117b3699adba9d4115b68))
 - CI에서 의미없는 ruff --fix 제거 ([c5fe2da](https://github.com/JungYeoni/da-template/commit/c5fe2daf4c3730ddb07576937648382781dc182d))
 - Ruff format --check 추가로 포맷 불일치 CI 차단 ([3e8f382](https://github.com/JungYeoni/da-template/commit/3e8f382b698896126e58e3beb2e80c9bbdf29aa3))
 
@@ -23,6 +24,7 @@
 
 ### 문서
 
+- CHANGELOG 자동 업데이트 [skip ci] ([2017ad3](https://github.com/JungYeoni/da-template/commit/2017ad3a0bafe6bf2b5e7148f8cbb5c0ed8ed9f4))
 - Uv 의존성 관리 안내 추가 ([4b14197](https://github.com/JungYeoni/da-template/commit/4b14197f8b497d2dce67494eda6e52d23b5bfa34))
 - CHANGELOG 자동 업데이트 [skip ci] ([e9b618c](https://github.com/JungYeoni/da-template/commit/e9b618c93d85a533bfffb088790f61a50117d519))
 - Git 작업 안전 규칙 추가 ([f368b28](https://github.com/JungYeoni/da-template/commit/f368b283043023d54b3fea4cfbe082fa91f4fda7))
