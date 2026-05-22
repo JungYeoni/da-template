@@ -221,7 +221,6 @@ pytest tests/ -v
 | 워크플로우 | 트리거 | 내용 |
 |-----------|--------|------|
 | `ci.yml` | push/PR to `main` | ruff lint, ruff format check, pytest |
-| `notebook-smoke-test.yml` | PR에서 `notebooks/` 변경 | 변경된 노트북 실행 가능 여부 확인 |
 | `changelog.yml` | `main` push | `CHANGELOG.md` 자동 생성 |
 
 변경 이력은 README에 직접 삽입하지 않고, 별도 [`CHANGELOG.md`](CHANGELOG.md) 파일로 관리합니다.
