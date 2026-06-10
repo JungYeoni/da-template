@@ -25,6 +25,7 @@
 
 ### 문서
 
+- CHANGELOG 자동 업데이트 [skip ci] ([2804c57](https://github.com/JungYeoni/da-template/commit/2804c57e39756b2c4cad1ff24d6440a8c0b99134))
 - CHANGELOG 자동 업데이트 [skip ci] ([d3f1b8f](https://github.com/JungYeoni/da-template/commit/d3f1b8fd94f3ea153a7bbbd76d9445fe63216961))
 - CHANGELOG 자동 업데이트 [skip ci] ([2017ad3](https://github.com/JungYeoni/da-template/commit/2017ad3a0bafe6bf2b5e7148f8cbb5c0ed8ed9f4))
 - Uv 의존성 관리 안내 추가 ([4b14197](https://github.com/JungYeoni/da-template/commit/4b14197f8b497d2dce67494eda6e52d23b5bfa34))
@@ -42,6 +43,7 @@
 
 ### 버그 수정
 
+- Sync-labels 워크플로우 permissions 추가 ([bf90060](https://github.com/JungYeoni/da-template/commit/bf90060d2d96063ae948f83b2b0ea23d7cec33db))
 - Pr 제목 접두사 검사 워크플로우 삭제 ([e52463d](https://github.com/JungYeoni/da-template/commit/e52463dd9bc6f3552470cb9a6df9cc0ced29d52c))
 - Cliff.toml env.GITHUB_REPO 변수 오류 수정 ([a68e29c](https://github.com/JungYeoni/da-template/commit/a68e29c9a790684ee0524e106a8106ca99d63a8c))
 - Git-cliff-action Docker Buster EOL 오류 수정 ([5bb2c8b](https://github.com/JungYeoni/da-template/commit/5bb2c8bb2a06560c1cd59ce137e5b10f37b63dc9))
