@@ -15,6 +15,7 @@
 
 ### 기타
 
+- Reprot 제목 형식 통일 ([9ffcbfc](https://github.com/JungYeoni/da-template/commit/9ffcbfc8ed177ff4b539eae9e0f7f8d8a54a44fd))
 - 이슈 템플릿 name 및 제목 형식 개선 ([3fe5df7](https://github.com/JungYeoni/da-template/commit/3fe5df75c68a468c3931047f9f1c9594e570032f))
 - 이슈 템플릿을 da-template 컨셉에 맞게 교체 ([a591a5d](https://github.com/JungYeoni/da-template/commit/a591a5db79004ada76ac067465dab411c6df278f))
 - Uv 패키지 매니저로 전환 ([330ab72](https://github.com/JungYeoni/da-template/commit/330ab7285fb25faf8b77f8c161f5de62c67dadce))
@@ -25,6 +26,7 @@
 
 ### 문서
 
+- CHANGELOG 자동 업데이트 [skip ci] ([14eca2e](https://github.com/JungYeoni/da-template/commit/14eca2ea9ab881d13523ae6b80980e8ff460575c))
 - CHANGELOG 자동 업데이트 [skip ci] ([2804c57](https://github.com/JungYeoni/da-template/commit/2804c57e39756b2c4cad1ff24d6440a8c0b99134))
 - CHANGELOG 자동 업데이트 [skip ci] ([d3f1b8f](https://github.com/JungYeoni/da-template/commit/d3f1b8fd94f3ea153a7bbbd76d9445fe63216961))
 - CHANGELOG 자동 업데이트 [skip ci] ([2017ad3](https://github.com/JungYeoni/da-template/commit/2017ad3a0bafe6bf2b5e7148f8cbb5c0ed8ed9f4))
