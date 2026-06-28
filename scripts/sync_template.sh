@@ -46,6 +46,16 @@ while IFS= read -r project || [ -n "$project" ]; do
     echo "   ✓ .claude/$dir"
   done
 
+  # Git hooks 동기화
+  if [ -d "$project/.git" ]; then
+    for hook in "$TEMPLATE_DIR/scripts/hooks/"*; do
+      hook_name=$(basename "$hook")
+      cp "$hook" "$project/.git/hooks/$hook_name"
+      chmod +x "$project/.git/hooks/$hook_name"
+    done
+    echo "   ✓ .git/hooks"
+  fi
+
   ((success++)) || true
 done < "$PROJECTS_FILE"
 
