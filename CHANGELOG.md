@@ -26,6 +26,7 @@
 
 ### 문서
 
+- CHANGELOG 자동 업데이트 [skip ci] ([6124f8a](https://github.com/JungYeoni/da-template/commit/6124f8aec9108636253037bb16e14c9f06d2e9e8))
 - CHANGELOG 자동 업데이트 [skip ci] ([14eca2e](https://github.com/JungYeoni/da-template/commit/14eca2ea9ab881d13523ae6b80980e8ff460575c))
 - CHANGELOG 자동 업데이트 [skip ci] ([2804c57](https://github.com/JungYeoni/da-template/commit/2804c57e39756b2c4cad1ff24d6440a8c0b99134))
 - CHANGELOG 자동 업데이트 [skip ci] ([d3f1b8f](https://github.com/JungYeoni/da-template/commit/d3f1b8fd94f3ea153a7bbbd76d9445fe63216961))
@@ -57,6 +58,7 @@
 
 ### 새 기능
 
+- 템플릿 동기화 스크립트 및 post-commit hook 추가 ([b300ff1](https://github.com/JungYeoni/da-template/commit/b300ff1956218339fa91633dde2bb199f2a2a4b7))
 - README에 최근 변경사항 자동 주입 추가 ([2378fcc](https://github.com/JungYeoni/da-template/commit/2378fcc7dd765ac19519816ccd713279bbe73d5d))
 - 데이터분석·ML 프로젝트 템플릿 전체 구성 ([07fbb5b](https://github.com/JungYeoni/da-template/commit/07fbb5bafcd6d59039816e44756597bfe0511820))
 - 분석 슬래시 커맨드 6종 추가 및 README 작성 ([cf20bf9](https://github.com/JungYeoni/da-template/commit/cf20bf9e414eedb7f61008b3ead25b347a427b2c))
