@@ -15,6 +15,7 @@
 
 ### 기타
 
+- 노트북 파일명 형식 규칙 추가 ([14ae8eb](https://github.com/JungYeoni/da-template/commit/14ae8eb8de2e88052bfb20683baff977447ca9d8))
 - Reprot 제목 형식 통일 ([9ffcbfc](https://github.com/JungYeoni/da-template/commit/9ffcbfc8ed177ff4b539eae9e0f7f8d8a54a44fd))
 - 이슈 템플릿 name 및 제목 형식 개선 ([3fe5df7](https://github.com/JungYeoni/da-template/commit/3fe5df75c68a468c3931047f9f1c9594e570032f))
 - 이슈 템플릿을 da-template 컨셉에 맞게 교체 ([a591a5d](https://github.com/JungYeoni/da-template/commit/a591a5db79004ada76ac067465dab411c6df278f))
@@ -26,6 +27,7 @@
 
 ### 문서
 
+- CHANGELOG 자동 업데이트 [skip ci] ([18f7bf5](https://github.com/JungYeoni/da-template/commit/18f7bf56b8564293499d0d407c6d24b5365f0c9e))
 - CHANGELOG 자동 업데이트 [skip ci] ([6124f8a](https://github.com/JungYeoni/da-template/commit/6124f8aec9108636253037bb16e14c9f06d2e9e8))
 - CHANGELOG 자동 업데이트 [skip ci] ([14eca2e](https://github.com/JungYeoni/da-template/commit/14eca2ea9ab881d13523ae6b80980e8ff460575c))
 - CHANGELOG 자동 업데이트 [skip ci] ([2804c57](https://github.com/JungYeoni/da-template/commit/2804c57e39756b2c4cad1ff24d6440a8c0b99134))
