@@ -15,6 +15,7 @@
 
 ### 기타
 
+- Notebook smoke test 워크플로우 제거 ([529a9f9](https://github.com/JungYeoni/da-template/commit/529a9f962d55759710600ef61f0d79e30c8fc4ea))
 - 노트북 파일명 형식 규칙 추가 ([14ae8eb](https://github.com/JungYeoni/da-template/commit/14ae8eb8de2e88052bfb20683baff977447ca9d8))
 - Reprot 제목 형식 통일 ([9ffcbfc](https://github.com/JungYeoni/da-template/commit/9ffcbfc8ed177ff4b539eae9e0f7f8d8a54a44fd))
 - 이슈 템플릿 name 및 제목 형식 개선 ([3fe5df7](https://github.com/JungYeoni/da-template/commit/3fe5df75c68a468c3931047f9f1c9594e570032f))
@@ -27,6 +28,7 @@
 
 ### 문서
 
+- CHANGELOG 자동 업데이트 [skip ci] ([f923e28](https://github.com/JungYeoni/da-template/commit/f923e286f279fc7b65dd350b82d25feb8b523973))
 - CHANGELOG 자동 업데이트 [skip ci] ([44f5b70](https://github.com/JungYeoni/da-template/commit/44f5b70795604f5901e6781b2b629bc39b03c7bb))
 - CHANGELOG 자동 업데이트 [skip ci] ([8d4bfb7](https://github.com/JungYeoni/da-template/commit/8d4bfb79a0e79eb0f41b425d98ce394052618b99))
 - CHANGELOG 자동 업데이트 [skip ci] ([18f7bf5](https://github.com/JungYeoni/da-template/commit/18f7bf56b8564293499d0d407c6d24b5365f0c9e))
