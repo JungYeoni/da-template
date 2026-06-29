@@ -27,6 +27,7 @@
 
 ### 문서
 
+- CHANGELOG 자동 업데이트 [skip ci] ([44f5b70](https://github.com/JungYeoni/da-template/commit/44f5b70795604f5901e6781b2b629bc39b03c7bb))
 - CHANGELOG 자동 업데이트 [skip ci] ([8d4bfb7](https://github.com/JungYeoni/da-template/commit/8d4bfb79a0e79eb0f41b425d98ce394052618b99))
 - CHANGELOG 자동 업데이트 [skip ci] ([18f7bf5](https://github.com/JungYeoni/da-template/commit/18f7bf56b8564293499d0d407c6d24b5365f0c9e))
 - CHANGELOG 자동 업데이트 [skip ci] ([6124f8a](https://github.com/JungYeoni/da-template/commit/6124f8aec9108636253037bb16e14c9f06d2e9e8))
@@ -49,6 +50,7 @@
 
 ### 버그 수정
 
+- Ruff pre-commit hook 활성화 및 rev 최신화 ([3b2b4f2](https://github.com/JungYeoni/da-template/commit/3b2b4f29367db4e2bf89501029d36b73156e02af))
 - Sync-labels 워크플로우 permissions 추가 ([bf90060](https://github.com/JungYeoni/da-template/commit/bf90060d2d96063ae948f83b2b0ea23d7cec33db))
 - Pr 제목 접두사 검사 워크플로우 삭제 ([e52463d](https://github.com/JungYeoni/da-template/commit/e52463dd9bc6f3552470cb9a6df9cc0ced29d52c))
 - Cliff.toml env.GITHUB_REPO 변수 오류 수정 ([a68e29c](https://github.com/JungYeoni/da-template/commit/a68e29c9a790684ee0524e106a8106ca99d63a8c))
