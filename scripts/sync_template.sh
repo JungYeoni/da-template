@@ -6,8 +6,11 @@ set -euo pipefail
 TEMPLATE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 PROJECTS_FILE="$TEMPLATE_DIR/scripts/projects.txt"
 
-# 동기화 대상 디렉토리 (CLAUDE.md 제외 — 프로젝트별 커스텀 유지)
+# .claude/ 하위 동기화 대상 (CLAUDE.md 제외 — 프로젝트별 커스텀 유지)
 SYNC_DIRS=("rules" "agents" "commands" "skills")
+
+# 루트 기준 전체 경로 동기화 대상 (삭제도 전파됨)
+SYNC_PATHS=(".github/workflows")
 
 if [ ! -f "$PROJECTS_FILE" ]; then
   echo "❌ projects.txt 없음: $PROJECTS_FILE"
@@ -46,6 +49,20 @@ while IFS= read -r project || [ -n "$project" ]; do
     echo "   ✓ .claude/$dir"
   done
 
+  # 루트 기준 경로 동기화 (workflows 등 — 삭제도 전파)
+  for path in "${SYNC_PATHS[@]}"; do
+    src="$TEMPLATE_DIR/$path"
+    dst="$project/$path"
+
+    if [ ! -d "$src" ]; then
+      continue
+    fi
+
+    mkdir -p "$dst"
+    rsync -a --delete "$src/" "$dst/"
+    echo "   ✓ $path"
+  done
+
   # Git hooks 동기화
   if [ -d "$project/.git" ]; then
     for hook in "$TEMPLATE_DIR/scripts/hooks/"*; do
@@ -56,9 +73,9 @@ while IFS= read -r project || [ -n "$project" ]; do
     echo "   ✓ .git/hooks"
   fi
 
-  # pre-commit 훅 설치 (설정 파일이 있고 pre-commit이 설치된 경우)
-  if [ -f "$project/.pre-commit-config.yaml" ] && command -v pre-commit &>/dev/null; then
-    (cd "$project" && pre-commit install -q)
+  # pre-commit 훅 설치 (git repo이고 설정 파일이 있는 경우)
+  if [ -d "$project/.git" ] && [ -f "$project/.pre-commit-config.yaml" ] && command -v pre-commit &>/dev/null; then
+    (cd "$project" && pre-commit install 2>/dev/null) || true
     echo "   ✓ pre-commit install"
   fi
 
