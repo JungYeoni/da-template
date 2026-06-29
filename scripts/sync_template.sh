@@ -56,6 +56,12 @@ while IFS= read -r project || [ -n "$project" ]; do
     echo "   ✓ .git/hooks"
   fi
 
+  # pre-commit 훅 설치 (설정 파일이 있고 pre-commit이 설치된 경우)
+  if [ -f "$project/.pre-commit-config.yaml" ] && command -v pre-commit &>/dev/null; then
+    (cd "$project" && pre-commit install -q)
+    echo "   ✓ pre-commit install"
+  fi
+
   ((success++)) || true
 done < "$PROJECTS_FILE"
 
