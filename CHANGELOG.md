@@ -15,6 +15,7 @@
 
 ### 기타
 
+- Ruff에서 임포트 정렬(I) 규칙 제거 ([2347bf9](https://github.com/JungYeoni/da-template/commit/2347bf9cfececc2c1bbd2025a29c6eeed1aed5ec))
 - Notebook smoke test 워크플로우 제거 ([529a9f9](https://github.com/JungYeoni/da-template/commit/529a9f962d55759710600ef61f0d79e30c8fc4ea))
 - 노트북 파일명 형식 규칙 추가 ([14ae8eb](https://github.com/JungYeoni/da-template/commit/14ae8eb8de2e88052bfb20683baff977447ca9d8))
 - Reprot 제목 형식 통일 ([9ffcbfc](https://github.com/JungYeoni/da-template/commit/9ffcbfc8ed177ff4b539eae9e0f7f8d8a54a44fd))
@@ -28,6 +29,7 @@
 
 ### 문서
 
+- CHANGELOG 자동 업데이트 [skip ci] ([30a9222](https://github.com/JungYeoni/da-template/commit/30a9222ffcc2842b502d31e4b47ae74d8307cd40))
 - CHANGELOG 자동 업데이트 [skip ci] ([8c441fa](https://github.com/JungYeoni/da-template/commit/8c441fa3bdbdbda9355bbe4d20464529e7179e34))
 - CHANGELOG 자동 업데이트 [skip ci] ([f923e28](https://github.com/JungYeoni/da-template/commit/f923e286f279fc7b65dd350b82d25feb8b523973))
 - CHANGELOG 자동 업데이트 [skip ci] ([44f5b70](https://github.com/JungYeoni/da-template/commit/44f5b70795604f5901e6781b2b629bc39b03c7bb))
