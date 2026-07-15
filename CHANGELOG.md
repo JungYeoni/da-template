@@ -30,6 +30,8 @@
 
 ### 문서
 
+- CLAUDE.md에 재발명 금지 원칙 추가 ([58e0699](https://github.com/JungYeoni/da-template/commit/58e069903b87ee7c00bb56ab06f1840a68a2933a))
+- CHANGELOG 자동 업데이트 [skip ci] ([d19b98b](https://github.com/JungYeoni/da-template/commit/d19b98bf610a7169a026c6f3752e1d42ad0d10a2))
 - CHANGELOG 자동 업데이트 [skip ci] ([08ac8d6](https://github.com/JungYeoni/da-template/commit/08ac8d62a2a0c6b869e77eb9d8b612d9756db925))
 - CHANGELOG 자동 업데이트 [skip ci] ([30a9222](https://github.com/JungYeoni/da-template/commit/30a9222ffcc2842b502d31e4b47ae74d8307cd40))
 - CHANGELOG 자동 업데이트 [skip ci] ([8c441fa](https://github.com/JungYeoni/da-template/commit/8c441fa3bdbdbda9355bbe4d20464529e7179e34))
