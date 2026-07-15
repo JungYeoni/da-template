@@ -12,3 +12,4 @@
 /Users/leejungyeon/Workspace/projects/Mixup-Agent/korea_persona_modeling
 /Users/leejungyeon/Workspace/projects/Mixup-Agent/interview-agent
 /Users/leejungyeon/Workspace/projects/서울시빅데이터활용공모전/bookstay-map-seoul
+/Users/leejungyeon/Workspace/projects/한국재정정보원/yumocha
