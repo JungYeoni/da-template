@@ -4,6 +4,7 @@
 
 ### CI/CD
 
+- Ci.yml 따옴표 스타일을 작은따옴표로 통일 ([72a1521](https://github.com/JungYeoni/da-template/commit/72a15211de49845fa486d0c144c510025c961aaa))
 - 노트북 스모크 테스트 복구 및 라벨 동기화 워크플로우 추가 ([4c42a8c](https://github.com/JungYeoni/da-template/commit/4c42a8cceff424930eee73b0ae16fc25190202b9))
 - 노트북 스모크 테스트 워크플로우 삭제 ([646a7f6](https://github.com/JungYeoni/da-template/commit/646a7f6989f6d33a4c6117b3699adba9d4115b68))
 - CI에서 의미없는 ruff --fix 제거 ([c5fe2da](https://github.com/JungYeoni/da-template/commit/c5fe2daf4c3730ddb07576937648382781dc182d))
@@ -30,6 +31,7 @@
 
 ### 문서
 
+- CHANGELOG 자동 업데이트 [skip ci] ([31534e0](https://github.com/JungYeoni/da-template/commit/31534e05d98d43524592775291efb7bdc4297022))
 - CLAUDE.md에 재발명 금지 원칙 추가 ([58e0699](https://github.com/JungYeoni/da-template/commit/58e069903b87ee7c00bb56ab06f1840a68a2933a))
 - CHANGELOG 자동 업데이트 [skip ci] ([d19b98b](https://github.com/JungYeoni/da-template/commit/d19b98bf610a7169a026c6f3752e1d42ad0d10a2))
 - CHANGELOG 자동 업데이트 [skip ci] ([08ac8d6](https://github.com/JungYeoni/da-template/commit/08ac8d62a2a0c6b869e77eb9d8b612d9756db925))
@@ -73,6 +75,7 @@
 
 ### 새 기능
 
+- Issue-helper 워크플로우 추가 ([54153d2](https://github.com/JungYeoni/da-template/commit/54153d24b30d5a796c929e62cf3d3da6d95d1521))
 - 이슈 번호 자동 삽입 prepare-commit-msg hook 추가 ([4663f5d](https://github.com/JungYeoni/da-template/commit/4663f5ddb731b83c41bb2f60b8f4f6be75cb4fc7))
 - 템플릿 동기화 스크립트 및 post-commit hook 추가 ([b300ff1](https://github.com/JungYeoni/da-template/commit/b300ff1956218339fa91633dde2bb199f2a2a4b7))
 - README에 최근 변경사항 자동 주입 추가 ([2378fcc](https://github.com/JungYeoni/da-template/commit/2378fcc7dd765ac19519816ccd713279bbe73d5d))
