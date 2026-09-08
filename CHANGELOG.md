@@ -16,6 +16,7 @@
 
 ### 기타
 
+- 이슈 제목 접두사 형식 변경 ([4cc703a](https://github.com/JungYeoni/da-template/commit/4cc703af31bafd46d1ab03354bd0f74cd522bee1))
 - Yumocha 프로젝트를 동기화 대상에 추가 ([122516b](https://github.com/JungYeoni/da-template/commit/122516b4aae66cd3ffbd216c424b6540f618f05c))
 - Ruff에서 임포트 정렬(I) 규칙 제거 ([2347bf9](https://github.com/JungYeoni/da-template/commit/2347bf9cfececc2c1bbd2025a29c6eeed1aed5ec))
 - Notebook smoke test 워크플로우 제거 ([529a9f9](https://github.com/JungYeoni/da-template/commit/529a9f962d55759710600ef61f0d79e30c8fc4ea))
@@ -31,6 +32,7 @@
 
 ### 문서
 
+- CHANGELOG 자동 업데이트 [skip ci] ([fafa0ef](https://github.com/JungYeoni/da-template/commit/fafa0ef05a18f2fdf09bc2c625f4029846b998a6))
 - CHANGELOG 자동 업데이트 [skip ci] ([31534e0](https://github.com/JungYeoni/da-template/commit/31534e05d98d43524592775291efb7bdc4297022))
 - CLAUDE.md에 재발명 금지 원칙 추가 ([58e0699](https://github.com/JungYeoni/da-template/commit/58e069903b87ee7c00bb56ab06f1840a68a2933a))
 - CHANGELOG 자동 업데이트 [skip ci] ([d19b98b](https://github.com/JungYeoni/da-template/commit/d19b98bf610a7169a026c6f3752e1d42ad0d10a2))
