@@ -71,5 +71,5 @@ htmlcov/
 # ruff / black 캐시
 .ruff_cache/
 
-# 문서 / 설계 산출물
-docs/
+# 도구가 생성하는 임시 문서
+docs/superpowers/

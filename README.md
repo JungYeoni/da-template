@@ -110,6 +110,9 @@ da-template/
 ├── configs/
 │   └── base.yaml                 # 프로젝트 설정
 │
+├── docs/
+│   └── plans/                    # 구현·분석 계획
+│
 ├── data/
 │   ├── raw/                      # 원본 데이터, git 추적 제외
 │   ├── interim/                  # 중간 처리 데이터
