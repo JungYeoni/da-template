@@ -11,22 +11,13 @@ dependencies = [
     # 데이터
     "pandas>=2.0",
     "numpy>=1.26",
-    "polars>=0.20",
     # 통계
     "scipy>=1.11",
-    "statsmodels>=0.14",
     # 머신러닝
     "scikit-learn>=1.4",
-    "xgboost>=2.0",
-    "lightgbm>=4.0",
     # 시각화
     "matplotlib>=3.8",
     "seaborn>=0.13",
-    "plotly>=5.18",
-    "streamlit>=1.30",
-    # 설정
-    "pyyaml>=6.0",
-    "python-dotenv>=1.0",
 ]
 
 [project.optional-dependencies]
