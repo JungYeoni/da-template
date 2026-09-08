@@ -31,8 +31,14 @@
 - Pre-commit 훅 추가 — ruff lint + format 자동 적용 ([8d33a13](https://github.com/JungYeoni/da-template/commit/8d33a13124257a6a8d290b3f5651b733fff96e02))
 - Pyproject.toml에서 black 완전 제거, ruff format 설정 추가 ([2799e7b](https://github.com/JungYeoni/da-template/commit/2799e7b39b875e6fd1c30cfb03ef955e68833349))
 
+### 리팩터링
+
+- 미사용 의존성과 동기화 기능 제거 ([804da84](https://github.com/JungYeoni/da-template/commit/804da84fd8545eb65a14bad46bdce52047cffcf8))
+- 중복 설정 파일 제거 ([2d70044](https://github.com/JungYeoni/da-template/commit/2d7004434b323885be8b635b1533b414ae021efc))
+
 ### 문서
 
+- CHANGELOG 자동 업데이트 [skip ci] ([8f5e4f2](https://github.com/JungYeoni/da-template/commit/8f5e4f20f48327a4dd1fb5ef11044773f9b7c0a8))
 - CHANGELOG 자동 업데이트 [skip ci] ([96eece8](https://github.com/JungYeoni/da-template/commit/96eece8d2d0c709857368aac8ba9211af9c8de9f))
 - CHANGELOG 자동 업데이트 [skip ci] ([fafa0ef](https://github.com/JungYeoni/da-template/commit/fafa0ef05a18f2fdf09bc2c625f4029846b998a6))
 - CHANGELOG 자동 업데이트 [skip ci] ([31534e0](https://github.com/JungYeoni/da-template/commit/31534e05d98d43524592775291efb7bdc4297022))
