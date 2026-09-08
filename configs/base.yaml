@@ -1,5 +1,4 @@
-# base.yaml — 모든 환경에서 공통으로 적용되는 기본 설정
-# dev.yaml / prod.yaml 에서 필요한 값만 오버라이드
+# 프로젝트 기본 설정
 
 project:
   name: "da-template"

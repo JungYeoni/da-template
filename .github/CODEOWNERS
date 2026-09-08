@@ -21,4 +21,3 @@ notebooks/                   @visualization-owner
 
 # 의존성 / 빌드 설정
 pyproject.toml               @repo-admin
-requirements.txt             @repo-admin

@@ -80,7 +80,6 @@ Windows PowerShell에서는 가상환경 활성화 명령이 다릅니다.
 - 잠금 파일은 `uv.lock`으로 관리합니다.
 - 새 환경을 만들 때는 `uv sync --extra dev`를 사용합니다.
 - 명령 실행은 `uv run <command>` 형식을 권장합니다.
-- `requirements.txt`는 호환성이나 외부 배포가 필요한 경우를 위한 보조 파일입니다.
 
 자주 쓰는 명령:
 
@@ -109,13 +108,10 @@ da-template/
 ├── CLAUDE.md                     # Claude Code용 프로젝트 지침
 ├── pyproject.toml                # 패키지 메타데이터와 도구 설정
 ├── uv.lock                       # uv 잠금 파일
-├── requirements.txt              # 핵심 의존성 목록
 ├── cliff.toml                    # git-cliff 변경 이력 설정
 │
 ├── configs/
-│   ├── base.yaml                 # 공통 설정
-│   ├── dev.yaml                  # 개발 환경 설정
-│   └── prod.yaml                 # 제출/운영 환경 설정
+│   └── base.yaml                 # 프로젝트 설정
 │
 ├── data/
 │   ├── raw/                      # 원본 데이터, git 추적 제외
