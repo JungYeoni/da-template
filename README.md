@@ -68,7 +68,6 @@ Windows PowerShell에서는 가상환경 활성화 명령이 다릅니다.
 - `README.md`의 프로젝트 설명
 - `configs/base.yaml`의 경로, seed, train/validation/test 분할 기준
 - `.github/CODEOWNERS`와 GitHub 이슈/PR 템플릿
-- `cliff.toml`의 GitHub 저장소 URL
 
 ---
 
@@ -104,11 +103,9 @@ uv add --dev pytest
 ```text
 da-template/
 ├── README.md                     # 프로젝트 설명과 사용 방법
-├── CHANGELOG.md                  # 변경 이력
 ├── CLAUDE.md                     # Claude Code용 프로젝트 지침
 ├── pyproject.toml                # 패키지 메타데이터와 도구 설정
 ├── uv.lock                       # uv 잠금 파일
-├── cliff.toml                    # git-cliff 변경 이력 설정
 │
 ├── configs/
 │   └── base.yaml                 # 프로젝트 설정
@@ -132,7 +129,7 @@ da-template/
 ├── .github/
 │   ├── ISSUE_TEMPLATE/           # 이슈 템플릿
 │   ├── pull_request_template.md  # PR 체크리스트
-│   └── workflows/                # CI, 노트북 검사, changelog 자동화
+│   └── workflows/                # CI와 릴리스 자동화
 │
 └── .claude/                      # Claude Code 명령, 규칙, 에이전트 설정
 ```
@@ -217,9 +214,14 @@ pytest tests/ -v
 | 워크플로우 | 트리거 | 내용 |
 |-----------|--------|------|
 | `ci.yml` | push/PR to `main` | ruff lint, ruff format check, pytest |
-| `changelog.yml` | `main` push | `CHANGELOG.md` 자동 생성 |
+| `release.yml` | `v*.*.*` 태그 push | GitHub Release와 릴리스 노트 생성 |
 
-변경 이력은 README에 직접 삽입하지 않고, 별도 [`CHANGELOG.md`](CHANGELOG.md) 파일로 관리합니다.
+릴리스할 커밋에서 버전 태그를 생성해 푸시합니다.
+
+```bash
+git tag -a v0.2.0 -m "v0.2.0"
+git push origin v0.2.0
+```
 
 ---
 
@@ -255,7 +257,7 @@ Claude Code를 사용하지 않아도 프로젝트 실행에는 문제가 없습
 
 ## 변경 이력
 
-변경 이력은 [`CHANGELOG.md`](CHANGELOG.md)에서 확인할 수 있습니다.
+변경 이력은 GitHub Releases에서 확인할 수 있습니다.
 
 ---
 
