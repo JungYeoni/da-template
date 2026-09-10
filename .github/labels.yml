@@ -6,6 +6,14 @@
   color: "A855F7"
   description: "분석 결과 또는 코드 리뷰 요청"
 
+- name: "bug"
+  color: "D73A4A"
+  description: "분석 코드 또는 파이프라인 오류"
+
+- name: "enhancement"
+  color: "A2EEEF"
+  description: "새 기능 또는 기존 기능 개선"
+
 - name: "긴급"
   color: "EF4444"
   description: "긴급한 작업"
