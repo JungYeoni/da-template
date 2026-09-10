@@ -14,6 +14,10 @@
   color: "A2EEEF"
   description: "새 기능 또는 기존 기능 개선"
 
+- name: "task"
+  color: "4F46E5"
+  description: "리팩터링, 문서, CI 또는 설정 작업"
+
 - name: "긴급"
   color: "EF4444"
   description: "긴급한 작업"
