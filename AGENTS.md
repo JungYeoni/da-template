@@ -41,4 +41,5 @@
 
 - 사용자가 명시적으로 요청한 경우에만 커밋, 푸시, PR 생성을 진행한다.
 - 커밋 메시지에 AI 공동 작성자(`Co-Authored-By`)를 추가하지 않는다.
+- 커밋 메시지는 Conventional Commits 형식을 따르며, 타입(`feat`, `fix`, `docs`, `refactor`, `test`, `chore`, `ci`)은 영어로 쓰고 콜론 뒤 설명은 한국어로 작성한다.
 - GitHub 이슈 템플릿을 제외하고 로그 메시지와 `print` 출력에 이모지를 사용하지 않는다.
